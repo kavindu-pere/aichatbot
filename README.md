@@ -23,3 +23,35 @@ This application is a Spring Boot-based AI chatbot designed to provide intellige
 - **Docker**: Containerization platform.
 - **Maven**: Build tool.
 - **VS Code**: Integrated development environment.
+
+## To TRY on your own
+
+- Start Docker
+- Run `ollama-standalone-docker-compose.yml`
+- Access ollama shell with
+    ```sh
+    docker exec -it ollama
+    ```
+    - pull language model
+
+    ```sh
+    ollama pull llama3.2:3b-instruct-fp16
+    ```
+    - pull embedding model
+    ```sh
+    ollama pull nomic-embed-text:v1.5
+    ```
+- Run `milvus-standalone-docker-compose.yml`
+
+After all the container related operations are completed,
+
+- Start the Spring Boot application.
+
+- Navigate to `http://localhost:8080/swagger-ui.html`
+
+
+## To verify knowledge
+
+Look for `docs/information.txt` in the class path.
+
+
