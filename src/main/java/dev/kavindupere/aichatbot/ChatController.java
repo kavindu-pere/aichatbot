@@ -15,7 +15,7 @@ class ChatController {
 
     private final ChatService chatService;
     
-    @GetMapping("/chat")
+    @GetMapping("/chat/{chatId}")
     public String getMethodName(@PathVariable String chatId, @RequestParam String prompt) {
         return chatService.chat(chatId, prompt);
     }    
